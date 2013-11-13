@@ -1,7 +1,9 @@
 Heroku buildpack: Vert.x
 ========================
 
-This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpack) for [Vert.X](http://vertx.io/) apps.
+This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpack) for [Vert.X](http://vertx.io/) JRuby apps.
+
+Forked from [tomaslin buildpack](https://github.com/tomaslin/heroku-buildpack-vertx-jdk7).
 
 Usage
 -----
@@ -9,9 +11,9 @@ Usage
 Example usage:
 
     $ ls
-    server.js
+    server.rb
 
-    $ heroku create --stack cedar --buildpack https://github.com/tomaslin/heroku-buildpack-vertx-jdk7.git
+    $ heroku create --stack cedar --buildpack https://github.com/aemadrid/heroku-buildpack-vertx-jdk7.git
 	
 	$ git push heroku master
 
