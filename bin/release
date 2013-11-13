@@ -8,11 +8,12 @@ cat <<EOF
 config_vars:
   PATH: .jdk7/bin:.vertx/bin:.tools:/usr/local/bin:/usr/bin:/bin
   JAVA_OPTS: -Xmx384m
+  VERTX_INSTANCES: 5
 EOF
 
 if [ ! -f $BUILD_DIR/Procfile ]; then
 cat <<EOF
 default_process_types:
-  web: vertx run server.rb
+  web: vertx run server.rb -instances $VERTX_INSTANCES
 EOF
 fi
